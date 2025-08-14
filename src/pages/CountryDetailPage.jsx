@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import { useParams, useNavigate, Link } from 'react-router-dom'
-import './CountryDetailPage.css'
 
 const CountryDetailPage = () => {
   const { alpha3Code } = useParams()
@@ -9,6 +8,7 @@ const CountryDetailPage = () => {
   const [borderCountries, setBorderCountries] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
+  
 
   useEffect(() => {
     fetchCountryDetails()

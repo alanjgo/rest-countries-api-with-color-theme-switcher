@@ -1,15 +1,17 @@
 import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import './CountriesList.css'
 
 const CountriesList = () => {
   const [countries, setCountries] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
+  const navigate = useNavigate()
 
   useEffect(() => {
     const fetchCountries = async () => {
       try {
-        const response = await fetch('https://restcountries.com/v3.1/all?fields=name,flags,population,region,capital')
+        const response = await fetch('https://restcountries.com/v3.1/all?fields=name,flags,population,region,capital,cca3')
         if (!response.ok) {
           throw new Error('Erreur lors de la récupération des données')
         }
@@ -21,7 +23,8 @@ const CountriesList = () => {
           name: country.name.common,
           population: country.population,
           region: country.region,
-          capital: country.capital?.[0] || 'N/A'
+          capital: country.capital?.[0] || 'N/A',
+          alpha3Code: country.cca3
         }))
         
         setCountries(formattedCountries)
@@ -35,13 +38,21 @@ const CountriesList = () => {
     fetchCountries()
   }, [])
 
+  const handleCountryClick = (alpha3Code) => {
+    navigate(`/country/${alpha3Code}`)
+  }
+
   if (loading) return <div>Chargement...</div>
   if (error) return <div>Erreur: {error}</div>
 
   return (
     <div className="countries-grid">
       {countries.map((country, index) => (
-        <div key={index} className="country-card">
+        <div key={index}
+            className="country-card"
+            onClick={() => handleCountryClick(country.alpha3Code)}
+            style={{ cursor: 'pointer' }}
+        >
           <img src={country.flag} alt={`Drapeau de ${country.name}`} className="country-flag" />
           <div className="country-info">
             <h3>{country.name}</h3>
