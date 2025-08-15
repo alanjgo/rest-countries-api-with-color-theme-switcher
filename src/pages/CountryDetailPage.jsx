@@ -114,40 +114,40 @@ const CountryDetailPage = () => {
             <div className="info-grid">
               <div className="info-column">
                 <p className="info-item">
-                  <span className="info-label">Native Name:</span>
+                  <span className="info-label">Native Name: </span>
                   <span className="info-value">
                     {Object.values(country.name.nativeName || {})[0]?.common || country.name.common}
                   </span>
                 </p>
                 <p className="info-item">
-                  <span className="info-label">Population:</span>
+                  <span className="info-label">Population: </span>
                   <span className="info-value">{formatPopulation(country.population)}</span>
                 </p>
                 <p className="info-item">
-                  <span className="info-label">Region:</span>
+                  <span className="info-label">Region: </span>
                   <span className="info-value">{country.region}</span>
                 </p>
                 <p className="info-item">
-                  <span className="info-label">Sub Region:</span>
+                  <span className="info-label">Sub Region: </span>
                   <span className="info-value">{country.subregion || 'N/A'}</span>
                 </p>
                 <p className="info-item">
-                  <span className="info-label">Capital:</span>
+                  <span className="info-label">Capital: </span>
                   <span className="info-value">{country.capital?.[0] || 'N/A'}</span>
                 </p>
               </div>
               
               <div className="info-column">
                 <p className="info-item">
-                  <span className="info-label">Top Level Domain:</span>
+                  <span className="info-label">Top Level Domain: </span>
                   <span className="info-value">{country.tld?.[0] || 'N/A'}</span>
                 </p>
                 <p className="info-item">
-                  <span className="info-label">Currencies:</span>
+                  <span className="info-label">Currencies: </span>
                   <span className="info-value">{formatCurrencies(country.currencies)}</span>
                 </p>
                 <p className="info-item">
-                  <span className="info-label">Languages:</span>
+                  <span className="info-label">Languages: </span>
                   <span className="info-value">{formatLanguages(country.languages)}</span>
                 </p>
               </div>
@@ -155,7 +155,7 @@ const CountryDetailPage = () => {
             
             {borderCountries.length > 0 && (
               <div className="border-countries">
-                <h3 className="border-title">Border Countries:</h3>
+                <h3 className="border-title">Border Countries: </h3>
                 <div className="border-buttons">
                   {borderCountries.map(borderCountry => (
                     <Link

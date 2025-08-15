@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './CountriesList.css'
 
-const CountriesList = () => {
+const CountriesList = ({ searchQuery }) => {
   const [countries, setCountries] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
@@ -38,6 +38,17 @@ const CountriesList = () => {
     fetchCountries()
   }, [])
 
+  // Filtrer les pays en fonction de la recherche
+  const filteredCountries = countries.filter(country => {
+    if (!searchQuery) return true
+    
+    const query = searchQuery.toLowerCase()
+    const countryName = country.name.toLowerCase()
+    const countryCapital = country.capital.toLowerCase()
+    
+    return countryName.includes(query) || countryCapital.includes(query)
+  })
+
   const handleCountryClick = (alpha3Code) => {
     navigate(`/country/${alpha3Code}`)
   }
@@ -48,7 +59,7 @@ const CountriesList = () => {
   return (
     <div className="countries-container">
       <div className="countries-grid">
-        {countries.map((country, index) => (
+        {filteredCountries.map((country, index) => (
           <div key={index}
               className="country-card"
               onClick={() => handleCountryClick(country.alpha3Code)}

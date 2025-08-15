@@ -41,16 +41,14 @@ Users should be able to:
       - Currencies (select all languages when multiple)
       - Languages (select all languages when multiple)
       - Border Countries select (all languages when multiple)
-    3.2  [x]  Display the endpoint retrieved in a dedicated page called "CountryDetail"
-    3.3  [x] Users can click on the countries in Border countries and arrive on the new country detail page
-    3.4  [x] Users can click on "Go back" and find the countries list again.
-    3.5 Create CSS page to get a clean UI
+    3.2 [x]  Display the endpoint retrieved in a dedicated page called "CountryDetail"
+    3.3 [x] Users can click on the countries in Border countries and arrive on the new country detail page
+    3.4 [x] Users can click on "Go back" and find the countries list again.
+    3.5 [x] Create CSS page to get a clean UI
 
-  4. Search by country
-  5. Filter countries by region
-  6. Dark mode
-
-
+  4. [] Search by country
+  5. [] Filter countries by region
+  6. [] Dark mode
 
 ### Built with
 
@@ -61,6 +59,3 @@ Users should be able to:
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
 - [Vite]
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
-
