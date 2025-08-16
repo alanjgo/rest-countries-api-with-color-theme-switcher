@@ -44,7 +44,12 @@ function App() {
             //évite d'avoir à créer un composant wrapper supplémentaire
 
           } />
-          <Route path="/country/:alpha3Code" element={<CountryDetailPage />} />
+          <Route path="/country/:alpha3Code" element={
+            <CountryDetailPage 
+              isDarkMode={isDarkMode} 
+              onToggleTheme={toggleTheme}
+            />
+          } />
         </Routes>
         </main>
       </div>

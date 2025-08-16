@@ -14,22 +14,21 @@
 }
 
 .country-card {
-  background: white;
+  background: var(--elements-background);
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px var(--shadow-color);
   overflow: hidden;
 }
 
 .country-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 16px var(--shadow-color);
 }
 
 .country-flag {
   width: 100%;
   height: 160px;
   object-fit: cover;
-  border-bottom: 1px solid #f0f0f0;
 }
 
 .country-info {
@@ -40,18 +39,19 @@
   margin: 0 0 1rem 0;
   font-size: 1.2rem;
   font-weight: 600;
-  color: hsl(200, 15%, 8%);
+  color: var(--text-color);
 }
 
 .country-info p {
   margin: 0.5rem 0;
   font-size: 0.9rem;
-  color: hsl(200, 15%, 8%);
+  color: var(--text-color);
   line-height: 1.4;
 }
 
 .country-info strong {
-  color: hsl(200, 15%, 8%);
+  color: var(--text-color);
+  transition: color 0.3s ease;
 }
 
 /* Responsive design pour les écrans plus petits */
