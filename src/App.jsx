@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { useState } from 'react'
 import Header from './components/Header'
 import SearchBar from './components/SearchBarAndFilter'
-import CountriesList from './pages/CountriesList'
+import CountriesList from './components/CountriesList'
 import CountryDetailPage from './pages/CountryDetailPage'
 import './App.css'
 
