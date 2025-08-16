@@ -41,15 +41,7 @@ h1 {
   border-radius: 6px;
 }
 
-.theme-toggle:hover {
-  background-color: hsl(0, 0%, 95%);
-}
-
-.theme-toggle:active {
-  transform: scale(0.98);
-}
-
 .theme-icon {
-  width: 16px;
-  height: 16px;
+  width: 24px;
+  height: 24px;
 }

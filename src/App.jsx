@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { useState } from 'react'
 import Header from './components/Header'
 import SearchBar from './components/SearchBarAndFilter'
-import CountriesList from './components/CountriesList'
+import CountriesList from './pages/CountriesList'
 import CountryDetailPage from './pages/CountryDetailPage'
 import './App.css'
 
@@ -40,8 +40,7 @@ function App() {
                 searchQuery={searchQuery} 
                 selectedRegion={selectedRegion}
               />
-            </> 
-            //évite d'avoir à créer un composant wrapper supplémentaire
+            </>  //évite d'avoir à créer un composant wrapper supplémentaire
 
           } />
           <Route path="/country/:alpha3Code" element={

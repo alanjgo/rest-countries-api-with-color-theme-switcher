@@ -17,7 +17,6 @@ const CountriesList = ({ searchQuery, selectedRegion }) => {
         }
         const data = await response.json()
         
-        // Extraire uniquement les champs demandés : flag, name, population, region, capital
         const formattedCountries = data.map(country => ({
           flag: country.flags.svg,
           name: country.name.common,
@@ -59,8 +58,8 @@ const CountriesList = ({ searchQuery, selectedRegion }) => {
     navigate(`/country/${alpha3Code}`)
   }
 
-  if (loading) return <div>Chargement...</div>
-  if (error) return <div>Erreur: {error}</div>
+  if (loading) return <div>Loading...</div>
+  if (error) return <div>Error: {error}</div>
 
   return (
     <div className="countries-container">

@@ -5,6 +5,7 @@
   --text-color: hsl(200, 15%, 8%); /* Grey 950 - Light Mode Text */
   --input-text-color: hsl(0, 0%, 50%); /* Grey 400 - Light Mode Input */
   --shadow-color: rgba(0, 0, 0, 0.1);
+  --icon-filter: brightness(0) saturate(100%) invert(40%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0.5);
 }
 
 .dark-mode {
@@ -13,6 +14,7 @@
   --text-color: hsl(0, 100%, 100%); /* White - Dark Mode Text & Light Mode Elements */
   --input-text-color: hsl(0, 100%, 100%); /* White - Dark Mode Text */
   --shadow-color: rgba(0, 0, 0, 0.3);
+  --icon-filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(1);
 }
 
 /* Styles globaux */

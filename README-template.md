@@ -51,13 +51,13 @@ Users should be able to:
   6. [] Dark mode
       6.1 [x] Add section "icon + text dark mode" in the header 
       6.2 [x] Adapt the dark mode on the Header according @style-guide.md
-      6.3 [] Adapt the dark mode on the Countries List according @style-guide.md
+      6.3 [x] Adapt the dark mode on the Countries List according @style-guide.md
             - search bar
             - filter
             - country card
-      6.4 [] Adapt the dark mode on the country detail page according to @style-guide.md
+      6.4 [x] Adapt the dark mode on the country detail page according to @style-guide.md
 
-  7. Responsive design
+  7. [x]Responsive design
 
 ### Built with
 

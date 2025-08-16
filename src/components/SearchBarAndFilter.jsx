@@ -20,7 +20,6 @@ const SearchBar = ({ onSearch, onRegionFilter, selectedRegion }) => {
   return (
     <div className="search-filter-bar-container">
       <div className="search-input-wrapper">
-        <img className="search-icon" src="./src/assets/magnifying-glass-solid-full.svg"></img>
         <input
           type="text"
           placeholder="Search a country..."
