@@ -4,10 +4,12 @@ import Header from './components/Header'
 import SearchBar from './components/SearchBarAndFilter'
 import CountriesList from './components/CountriesList'
 import CountryDetailPage from './pages/CountryDetailPage'
+import './App.css'
 
 function App() {
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedRegion, setSelectedRegion] = useState('')
+  const [isDarkMode, setIsDarkMode] = useState(false)
 
   const handleSearch = (query) => {
     setSearchQuery(query)
@@ -17,10 +19,14 @@ function App() {
     setSelectedRegion(region)
   }
 
+  const toggleTheme = () => {
+    setIsDarkMode(!isDarkMode)
+  }
+
   return (
     <Router>
-      <div className="App">
-        <Header />
+      <div className={`App ${isDarkMode ? 'dark-mode' : 'light-mode'}`}>
+        <Header isDarkMode={isDarkMode} onToggleTheme={toggleTheme} />
         <main className="main-content">
         <Routes>
           <Route path="/" element={

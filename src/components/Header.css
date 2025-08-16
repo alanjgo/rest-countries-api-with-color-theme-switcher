@@ -1,14 +1,15 @@
 header {
-  background-color: hsl(0, 100%, 100%);
+  background-color: var(--elements-background);
   padding: 16px 0;
   border-bottom: 1px solid hsl(0, 0%, 90%);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 h1 {
   font-family: 'Nunito Sans', sans-serif;
   font-weight: 800;
   font-size: 1.5rem;
-  color: hsl(200, 15%, 8%);
+  color: var(--text-color);
   margin: 0;
   text-align: left;
 }
@@ -25,4 +26,30 @@ h1 {
   align-items: center;
   flex-wrap: wrap;
   gap: 20px;
+}
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text-color);
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.theme-toggle:hover {
+  background-color: hsl(0, 0%, 95%);
+}
+
+.theme-toggle:active {
+  transform: scale(0.98);
+}
+
+.theme-icon {
+  width: 16px;
+  height: 16px;
 }

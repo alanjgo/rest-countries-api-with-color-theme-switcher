@@ -46,9 +46,12 @@ Users should be able to:
     3.4 [x] Users can click on "Go back" and find the countries list again.
     3.5 [x] Create CSS page to get a clean UI
 
-  4. [] Search by country
-  5. [] Filter countries by region
+  4. [x] Search by country
+  5. [x] Filter countries by region
   6. [] Dark mode
+      6.1 Add section "icon + text dark mode" in the header 
+      6.2 Adapt the dark mode according @style-guide.md
+  7. Responsive design
 
 ### Built with
 

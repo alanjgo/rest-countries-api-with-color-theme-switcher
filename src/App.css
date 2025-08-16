@@ -1,0 +1,54 @@
+/* Variables CSS pour les thèmes selon le style guide */
+:root {
+  --background-color: hsl(0, 0%, 99%); /* Grey 50 - Light Mode Background */
+  --elements-background: hsl(0, 100%, 100%); /* White - Light Mode Elements */
+  --text-color: hsl(200, 15%, 8%); /* Grey 950 - Light Mode Text */
+  --input-text-color: hsl(0, 0%, 50%); /* Grey 400 - Light Mode Input */
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode {
+  --background-color: hsl(207, 26%, 17%); /* Blue 950 - Dark Mode Background */
+  --elements-background: hsl(209, 23%, 22%); /* Blue 900 - Dark Mode Elements */
+  --text-color: hsl(0, 100%, 100%); /* White - Dark Mode Text & Light Mode Elements */
+  --input-text-color: hsl(0, 100%, 100%); /* White - Dark Mode Text */
+  --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Styles globaux */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Nunito Sans', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.App {
+  min-height: 100vh;
+  background-color: var(--background-color);
+}
+
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Styles pour le header en mode sombre */
+.dark-mode header {
+  background-color: var(--elements-background);
+  border-bottom-color: hsl(209, 23%, 22%);
+}
+
+.dark-mode .theme-toggle {
+  color: var(--text-color);
+}
+
+.dark-mode .theme-toggle:hover {
+  background-color: hsl(209, 23%, 30%);
+}
