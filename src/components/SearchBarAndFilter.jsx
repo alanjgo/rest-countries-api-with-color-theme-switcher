@@ -1,13 +1,20 @@
 import { useState } from 'react'
-import './SearchBar.css'
+import './SearchBarAndFilter.css'
 
-const SearchBar = ({ onSearch }) => {
+const SearchBar = ({ onSearch, onRegionFilter, selectedRegion }) => {
   const [searchQuery, setSearchQuery] = useState('')
+
+  const regions = ['All', 'Africa', 'Americas', 'Asia', 'Europe', 'Oceania']
 
   const handleSearchChange = (event) => {
     const query = event.target.value
     setSearchQuery(query)
     onSearch(query)
+  }
+
+  const handleRegionChange = (event) => {
+    const region = event.target.value
+    onRegionFilter(region === 'All' ? '' : region)
   }
 
   return (
@@ -23,6 +30,20 @@ const SearchBar = ({ onSearch }) => {
           aria-label="Search a country..."
           role="search"
         />
+      </div>
+      <div className="filter-wrapper">
+        <select
+          value={selectedRegion || 'All'}
+          onChange={handleRegionChange}
+          className="region-filter"
+          aria-label="Filter by region"
+        >
+          {regions.map((region) => (
+            <option key={region} value={region}>
+              {region}
+            </option>
+          ))}
+        </select>
       </div>
     </div>
   )
