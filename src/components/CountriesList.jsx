@@ -44,9 +44,8 @@ const CountriesList = ({ searchQuery }) => {
     
     const query = searchQuery.toLowerCase()
     const countryName = country.name.toLowerCase()
-    const countryCapital = country.capital.toLowerCase()
     
-    return countryName.includes(query) || countryCapital.includes(query)
+    return countryName.includes(query)
   })
 
   const handleCountryClick = (alpha3Code) => {
