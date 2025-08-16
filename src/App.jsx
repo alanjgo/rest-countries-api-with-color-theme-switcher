@@ -29,7 +29,7 @@ function App() {
         <Header isDarkMode={isDarkMode} onToggleTheme={toggleTheme} />
         <main className="main-content">
         <Routes>
-          <Route path="/" element={
+          <Route path="/rest-countries-api-with-color-theme-switcher" element={
             <> 
               <SearchBar 
                 onSearch={handleSearch} 
