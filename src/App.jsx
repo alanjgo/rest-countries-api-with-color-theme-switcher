@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, BrowserRouter } from 'react-router-dom'
 import { useState } from 'react'
 import Header from './components/Header'
 import SearchBar from './components/SearchBarAndFilter'
@@ -24,7 +24,7 @@ function App() {
   }
 
   return (
-    <Router>
+    <BrowserRouter  basename= '/rest-countries-api-with-color-theme-switcher/'>
       <div className={`App ${isDarkMode ? 'dark-mode' : 'light-mode'}`}>
         <Header isDarkMode={isDarkMode} onToggleTheme={toggleTheme} />
         <main className="main-content">
@@ -52,7 +52,7 @@ function App() {
         </Routes>
         </main>
       </div>
-    </Router>
+    </BrowserRouter>
   )
 }
 
