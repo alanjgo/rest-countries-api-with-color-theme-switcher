@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, BrowserRouter } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { useState } from 'react'
 import Header from './components/Header'
 import SearchBar from './components/SearchBarAndFilter'
