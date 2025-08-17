@@ -7,9 +7,9 @@ export default defineConfig(({ command }) => {
   plugins: [react()],
   base: '/',
   }
-  
+
   if (command !== 'serve') {
-    config.base = '/react-vite-gh-pages/'
+    config.base = '/rest-countries-api-with-color-theme-switcher/'
   }
 
   return config
