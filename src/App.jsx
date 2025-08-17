@@ -24,7 +24,7 @@ function App() {
   }
 
   return (
-    <BrowserRouter  basename= '/rest-countries-api-with-color-theme-switcher/'>
+    <BrowserRouter >
       <div className={`App ${isDarkMode ? 'dark-mode' : 'light-mode'}`}>
         <Header isDarkMode={isDarkMode} onToggleTheme={toggleTheme} />
         <main className="main-content">
